@@ -1,26 +1,24 @@
-mkdir -p .github/workflows
-cat > .github/workflows/deploy.yml <<'YML'
-name: Deploy to GitHub Pages
+name: Build and deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - master   # deploy on pushes to master (change to main if your branch is main)
+      - master   # or 'main' if you use main
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
           cache: 'npm'
 
       - name: Install dependencies
@@ -29,9 +27,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./dist
-YML
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
