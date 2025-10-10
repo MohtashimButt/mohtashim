@@ -9,7 +9,7 @@ interface Project {
   github: string;
   demo?: string;
 }
-
+// lmaolmao
 const projects: Project[] = [
   {
     title: "Machine Learning Pipeline",
