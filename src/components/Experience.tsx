@@ -2,6 +2,7 @@ import { Briefcase } from 'lucide-react';
 import dfkiLogo from '@/assets/dfki_logo.png';
 import careemLogo from '@/assets/careem_logo.png';
 import lumsLogo from '@/assets/lums_logo.png';
+import educativeLogo from '@/assets/educative_logo.png';
 
 interface ExperienceItem {
   role: string;
@@ -49,6 +50,21 @@ const experiences: ExperienceItem[] = [
     ],
   },
   {
+    role: "Technical Content Intern",
+    company: "Educative Inc.",
+    location: "Lahore, Pakistan",
+    period: "June 2023 - Sept. 2023",
+    logo: educativeLogo,
+    responsibilities: [
+      "Deployed containers for React SPAs and Python modules.",
+      "Contributed to course development with a team of senior content engineers.",
+      {
+        text: "Curated around 60 technical articles on concepts related to computer vision, computer graphics, D3.js, and VPython.",
+        link: "https://www.educative.io/profile/view/5530479846227968",
+      },
+    ],
+  },
+  {
     role: "Machine Learning Intern",
     company: "Centre for Water Informatics and Technology.",
     location: "Lahore, Pakistan",
@@ -57,15 +73,20 @@ const experiences: ExperienceItem[] = [
     responsibilities: [
       "Integrated four ESP-32 cameras to develop a low-cost unit for capturing a multi-directional (360°) view.",
       "Automated image capture, upload, and retrieval via a self-hosted site using PHP, Python, Arduino, and HTML.",
-      "Contributed to open-source projects and team documentation",
+      // "Contributed to open-source projects and team documentation.",
       {
-        text: "Fine-tuned a tiny-Yolov5 model for forest fire detection in the retrieved images to trigger an alarm.",
+        text: "Fine-tuned a tiny-YoloV5 model for forest fire detection in the retrieved images to trigger an alarm.",
         link: "https://drive.google.com/file/d/1FvFCpzB2lRfscsHDdbdYB4m29-HbWsTE/view?usp=sharing",
-      }
-
+      },
     ],
   },
 ];
+
+const getLinkText = (company: string) => {
+  if (company === "Educative Inc.") return "My Profile";
+  if (company === "Centre for Water Informatics and Technology.") return "Final Report";
+  return "Tool Link";
+};
 
 const Experience = () => {
   return (
@@ -123,15 +144,12 @@ const Experience = () => {
                           rel="noopener noreferrer"
                           className="text-primary hover:underline"
                         >
-                          {exp.company === "Centre for Water Informatics and Technology."
-                            ? "Final Report"
-                            : "Tool Link"}
+                          {getLinkText(exp.company)}
                         </a>
                       </span>
                     )}
                   </li>
                 ))}
-
               </ul>
             </div>
           ))}
