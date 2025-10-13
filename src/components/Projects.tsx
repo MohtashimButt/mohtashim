@@ -3,6 +3,7 @@ import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
 import project3 from '@/assets/project-3.jpg';
 import project4 from '@/assets/project-4.jpg';
+import project5 from '@/assets/project-5.jpg';
 
 interface Project {
   title: string;
@@ -47,7 +48,16 @@ const projects: Project[] = [
     poster: "https://www.canva.com/design/DAGEc-SOpm0/9g8xip8uJ2YFQd_gyd9uKA/view"
   },
   {
-    title: "Real-Time Lane Segmentation and Street's Top-View Generation via dashcame",
+    title: "Learning Management System with RBAC",
+    image: project5,
+    description: [
+      "Implemented frontend (in React JS) and backend (in Express) of a role-based access LMS.",
+      "Created db schema, set up MongoDB cluster, and applied CRUD operations via self-engineered API calls.",
+    ],
+    github: "https://github.com/MohtashimButt/LMS"
+  },
+  {
+    title: "Real-Time Lane Segmentation and Street's Top-View Generation via dashcam",
     image: project4,
     description: [
       "Designed an algorithm that takes video from a dashcam to automatically segment the road lane (using LaneNet) architecture) and detect vehicles (using the Yolov7 model) to assist in self-driving.",
