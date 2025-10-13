@@ -22,8 +22,11 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-2">
             © {new Date().getFullYear()} Mohtashim Butt. All rights reserved.
+          </p>
+          <p className="text-sm text-muted-foreground italic">
+            🕷️ "With great power comes great responsibility" - Uncle Ben
           </p>
         </div>
       </footer>

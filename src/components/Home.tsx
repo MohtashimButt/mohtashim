@@ -12,6 +12,7 @@ const Home = () => {
               <span className="text-muted-foreground leading-relaxed">
                 Mohtashim Butt
               </span>
+              <span className="text-2xl ml-2">🕷️</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               I graduated in 2024 with a Bachelor's in Computer Science from {' '}
@@ -23,6 +24,7 @@ const Home = () => {
               >
                 LUMS School of Science and Engineering
               </a>
+              . With great power comes great responsibility! 🕸️
             </p>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Currently, I'm working at{' '}
