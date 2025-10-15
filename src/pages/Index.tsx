@@ -26,7 +26,7 @@ const Index = () => {
             © {new Date().getFullYear()} Mohtashim Butt. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground italic">
-            🕷️ "With great power comes great responsibility" - Uncle Ben
+            🕷️ "Croissant" 
           </p>
         </div>
       </footer>

@@ -24,7 +24,7 @@ const Home = () => {
               >
                 LUMS School of Science and Engineering
               </a>
-              . With great power comes great responsibility! 🕸️
+              {/* . With great power comes great responsibility! 🕸️ */}
             </p>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Currently, I'm working at{' '}

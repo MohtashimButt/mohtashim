@@ -1,6 +1,6 @@
 # 🕷️ Mohtashim Butt's Portfolio
 
-> *"With great power comes great responsibility"* - Uncle Ben
+<!-- > *"With great power comes great responsibility"* - Uncle Ben -->
 
 Welcome to my web development portfolio! This project showcases my journey as a software engineer, from building web applications to working with cutting-edge AI technologies.
 
