@@ -3,6 +3,7 @@ import dfkiLogo from '@/assets/dfki_logo.png';
 import careemLogo from '@/assets/careem_logo.png';
 import lumsLogo from '@/assets/lums_logo.png';
 import educativeLogo from '@/assets/educative_logo.png';
+import aerodyneLogo from '@/assets/aerodyne_logo.png'
 
 interface ExperienceItem {
   role: string;
@@ -47,6 +48,18 @@ const experiences: ExperienceItem[] = [
       "Stabilized two Go microservices by adding test coverage, optimizing SLO/SLA latencies, mitigating security vulnerabilities, extensively debugging the Docker Container, monitoring Kubernetes Pod, and onboarding services to Dynatrace.",
       "Migrated a legacy internal tool to a Java+TypeScript+Vite micro-frontend, integrating it into Careem's central portal adopted by the Food team.",
       "Built a cross-microservice monitoring dashboard with SQL, Python, and internal tools, later adopted by the central engineering department for monitoring microservices.",
+    ],
+  },
+  {
+    role: "Executive AI R&D (Reliability)",
+    company: "Aerodyne Group",
+    logo: aerodyneLogo,
+    location: "Lahore, Pakistan",
+    period: "May 2024 - Aug 2024",
+    responsibilities: [
+      "Implemented a feature of estimating and visualizing the GPS location of grid poles via dbscan clustering.",
+      "Tested and debugged the feature using docker container.",
+      "Developed a pipeline for the feature to get deployed to production with CI/CD.",
     ],
   },
   {
