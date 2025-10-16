@@ -43,8 +43,8 @@ const experiences: ExperienceItem[] = [
     location: "Dubai, UAE (Remote)",
     period: "Aug 2024 - May 2025",
     responsibilities: [
-      "Updated a GOLANG microservice to add a bot for automatically creating a JIRA ticket against a Slack message.",
-      "Stabilized two Go microservices by adding test coverage, optimizing SLO/SLA latencies, mitigating security vulnerabilities, and onboarding services to Dynatrace.",
+      "Updated a GOLANG microservice to add a bot for automatically creating a JIRA ticket against a Slack message which helps Food team to link their GitHub PRs with relevant JIRA tickets.",
+      "Stabilized two Go microservices by adding test coverage, optimizing SLO/SLA latencies, mitigating security vulnerabilities, extensively debugging the Docker Container, monitoring Kubernetes Pod, and onboarding services to Dynatrace.",
       "Migrated a legacy internal tool to a Java+TypeScript+Vite micro-frontend, integrating it into Careem's central portal adopted by the Food team.",
       "Built a cross-microservice monitoring dashboard with SQL, Python, and internal tools, later adopted by the central engineering department for monitoring microservices.",
     ],
@@ -56,7 +56,7 @@ const experiences: ExperienceItem[] = [
     period: "June 2023 - Sept. 2023",
     logo: educativeLogo,
     responsibilities: [
-      "Deployed containers for React SPAs and Python modules.",
+      "Deployed docker containers for React SPAs and Python modules.",
       "Contributed to course development with a team of senior content engineers.",
       {
         text: "Curated around 60 technical articles on concepts related to computer vision, computer graphics, D3.js, and VPython.",
