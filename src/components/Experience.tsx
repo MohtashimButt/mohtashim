@@ -44,14 +44,14 @@ const experiences: ExperienceItem[] = [
     location: "Dubai, UAE (Remote)",
     period: "Aug 2024 - May 2025",
     responsibilities: [
-      "Updated a GOLANG microservice to add a bot for automatically creating a JIRA ticket against a Slack message which helps Food team to link their GitHub PRs with relevant JIRA tickets.",
-      "Stabilized two Go microservices by adding test coverage, optimizing SLO/SLA latencies, mitigating security vulnerabilities, extensively debugging the Docker Container, monitoring Kubernetes Pod, and onboarding services to Dynatrace.",
+      "Developed a bot in Go microservice for automatically creating a JIRA ticket against a Slack message automating 80% of Mobile team's GitHub PRs workflows.",
+      "Stabilized two Go microservices by increasing test coverage to 90%, reducing SLO/SLA latencies, mitigating security vulnerabilities, debugging the Docker Container, monitoring Kubernetes Pod, and onboarding services to Dynatrace.",
       "Migrated a legacy internal tool to a Java+TypeScript+Vite micro-frontend, integrating it into Careem's central portal adopted by the Food team.",
-      "Built a cross-microservice monitoring dashboard with SQL, Python, and internal tools, later adopted by the central engineering department for monitoring microservices.",
+      "Built a monitoring dashboard for 3 microservices using SQL, Python, and internal tools, later adopted by the central engineering department for monitoring.",
     ],
   },
   {
-    role: "Executive AI R&D (Reliability)",
+    role: "Executive AI R&D (Reliability Intern)",
     company: "Aerodyne Group",
     logo: aerodyneLogo,
     location: "Lahore, Pakistan",
