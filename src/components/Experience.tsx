@@ -1,9 +1,8 @@
 import { Briefcase } from 'lucide-react';
-import dfkiLogo from '@/assets/dfki_logo.png';
+import acornLogo from '@/assets/acorn.png';
 import careemLogo from '@/assets/careem_logo.png';
+import cityAtLumsLogo from '@/assets/cityatlums.png';
 import lumsLogo from '@/assets/lums_logo.png';
-import educativeLogo from '@/assets/educative_logo.png';
-import aerodyneLogo from '@/assets/aerodyne_logo.png'
 
 interface ExperienceItem {
   role: string;
@@ -16,89 +15,81 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    role: "Guest Researcher",
-    company: "German Research Center for Artificial Intelligence",
-    logo: dfkiLogo,
-    location: "Kaiserslautern, Germany (Remote)",
-    period: "May 2025 - Present",
+    role: "AI & Automation Engineer",
+    company: "Acorn IT Services LLC.",
+    logo: acornLogo,
+    location: "California, USA (Remote)",
+    period: "Nov. 2025 - Present",
     responsibilities: [
-      {
-        text: "Built a Python app (and deployed using Gunicorn/Nginx) for an explainable GAT-based network graph using D3JS to predict gut-microbe to disease links across 120 diseases for potential drug-discovery.",
-        link: "https://sds-genetic-interaction-analysis.opendfki.de/gut_brain/",
-      },
-      "Fine-tuned 100+ LLMs from Hugging Face for protein/DNA/RNA sequence classification, regression, and interaction.",
-      {
-        text: "Deployed 32 embedding methods, 24 ML classifiers with 3 data types via containerized Python app (FLASK).",
-        link: "https://sds-genetic-interaction-analysis.opendfki.de/bio-experiment/",
-      },
-      {
-        text: "Built an LLM-based research assistant leveraging AI agents (researcher, evaluator, experiment proposer) to suggest a novel hypothesis and research path.",
-        link: "https://sds-genetic-interaction-analysis.opendfki.de/biomedical_discovery/",
-      },
+      "Built a full-stack data platform end-to-end, including an API layer, a 21-table RDS PostgreSQL data model, and an AWS Bedrock/Claude inference stage for automated per-client analytical reports.",
+      "Designed the data ingestion and PII-scrubbing pipeline to run at $50/month against a $250 budget.",
+      "Shipped 10+ backend automation services integrating REST APIs including Autotask and Datto RMM across 70 clients, cutting approximately 350 hours of manual work per month.",
+      "Engineered an end-to-end monitoring pipeline (API polling, FastAPI, InfluxDB, and Grafana) for job health across 70 clients, saving $100/month.",
+      "Led experiment design and evaluation for an AI ticket-classification model across 8 queues and 257 skills, reaching approximately 90% routing accuracy while keeping compliance-sensitive paths deterministic.",
+      "Diagnosed and resolved L1-L3 infrastructure issues across 70+ client environments, using recurring failure data to prioritize automation targets.",
     ],
   },
   {
-    role: "Software Engineer",
-    company: "Careem",
+    role: "Software Engineer 1",
+    company: "Careem (Uber Inc.)",
     logo: careemLogo,
     location: "Dubai, UAE (Remote)",
-    period: "Aug 2024 - May 2025",
+    period: "Aug. 2024 - Sept. 2025",
     responsibilities: [
-      "Developed a bot in Go microservice for automatically creating a JIRA ticket against a Slack message automating 80% of Mobile team's GitHub PRs workflows.",
-      "Stabilized two Go microservices by increasing test coverage to 90%, reducing SLO/SLA latencies, mitigating security vulnerabilities, debugging the Docker Container, monitoring Kubernetes Pod, and onboarding services to Dynatrace.",
-      "Migrated a legacy internal tool to a Java+TypeScript+Vite micro-frontend, integrating it into Careem's central portal adopted by the Food team.",
-      "Built a monitoring dashboard for 3 microservices using SQL, Python, and internal tools, later adopted by the central engineering department for monitoring.",
+      "Developed a bot in Go for Slack-to-JIRA ticket creation, automating 80% of the Mobile team's GitHub PR workflows.",
+      "Owned a production Go backend microservice, driving test coverage to 90%, managing SLO/SLA latencies, mitigating security vulnerabilities, and building Dynatrace log and metrics monitoring.",
+      "Rebuilt an internal tool's backend and frontend in Go and a TypeScript/Vite micro-frontend architecture, integrating it into a centralized portal.",
+      "Designed and maintained a centralized data and health dashboard spanning several backend microservices, combining SQL-based data analysis with a Python-driven internal-tooling backend.",
     ],
   },
   {
-    role: "Executive AI R&D (Reliability Intern)",
-    company: "Aerodyne Group",
-    logo: aerodyneLogo,
+    role: "Research Assistant",
+    company: "CITY at LUMS",
+    logo: cityAtLumsLogo,
     location: "Lahore, Pakistan",
-    period: "May 2024 - Aug 2024",
+    period: "Aug. 2023 - Aug. 2024",
     responsibilities: [
-      "Implemented a feature of estimating and visualizing the GPS location of grid poles via dbscan clustering.",
-      "Tested and debugged the feature using docker container.",
-      "Developed a pipeline for the feature to get deployed to production with CI/CD.",
-    ],
-  },
-  {
-    role: "Technical Content Intern",
-    company: "Educative Inc.",
-    location: "Lahore, Pakistan",
-    period: "June 2023 - Sept. 2023",
-    logo: educativeLogo,
-    responsibilities: [
-      "Deployed docker containers for React SPAs and Python modules.",
-      "Contributed to course development with a team of senior content engineers.",
-      {
-        text: "Curated around 60 technical articles on concepts related to computer vision, computer graphics, D3.js, and VPython.",
-        link: "https://www.educative.io/profile/view/5530479846227968",
-      },
+      "Collected satellite imagery via GEID, annotated with LabelMe, and hosted on Roboflow.",
+      "Developed a geographically transferable DL model for binary segmentation of urban greenspace.",
+      "Integrated NDVI mask as a post-processing step for enhanced segmentation.",
+      "Automated stitching of segmented greenspace images for visualizing Islamabad's F-7 Sector.",
+      "First authored a peer-reviewed paper on this work, published at IEEE IGARSS 2025.",
     ],
   },
   {
     role: "Machine Learning Intern",
-    company: "Centre for Water Informatics and Technology.",
+    company: "Centre for Water Informatics and Technology",
+    logo: lumsLogo,
     location: "Lahore, Pakistan",
     period: "May 2023 - June 2023",
-    logo: lumsLogo,
     responsibilities: [
-      "Integrated four ESP-32 cameras to develop a low-cost unit for capturing a multi-directional (360°) view.",
-      "Automated image capture, upload, and retrieval via a self-hosted site using PHP, Python, Arduino, and HTML.",
-      // "Contributed to open-source projects and team documentation.",
+      "Built a full-stack embedded system using four ESP-32 cameras, a self-hosted PHP/Python/Arduino backend, and a tiny-YOLOv5 model fine-tuned on captured frames for real-time forest-fire detection.",
       {
-        text: "Fine-tuned a tiny-YoloV5 model for forest fire detection in the retrieved images to trigger an alarm.",
+        text: "Read the project report.",
         link: "https://drive.google.com/file/d/1FvFCpzB2lRfscsHDdbdYB4m29-HbWsTE/view?usp=sharing",
       },
+    ],
+  },
+  {
+    role: "Teaching Assistant",
+    company: "Lahore University of Management Sciences",
+    location: "Lahore, Pakistan",
+    period: "Fall 2023 & Spring 2024",
+    logo: lumsLogo,
+    responsibilities: [
+      "Teaching Assistant for Deep Learning (CS-5312), Spring 2025.",
+      "Teaching Assistant for Software Engineering (CS-360), Spring 2024.",
+      "Teaching Assistant for Computer Vision Fundamentals (CS-5310), Fall 2023.",
+      "Teaching Assistant for Programming Fundamentals (CS-200), Spring 2023.",
+      "Teaching Assistant for Computational Problem Solving (CS-100), Fall 2022.",
+      "Teaching Assistant for Calculus 1 (MATH-101), Spring 2022.",
     ],
   },
 ];
 
 const getLinkText = (company: string) => {
-  if (company === "Educative Inc.") return "My Profile";
-  if (company === "Centre for Water Informatics and Technology.") return "Final Report";
-  return "Tool Link";
+  if (company === "Centre for Water Informatics and Technology") return "Project report";
+  return "Related link";
 };
 
 const Experience = () => {

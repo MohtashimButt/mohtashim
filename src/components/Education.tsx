@@ -16,12 +16,9 @@ const education: EducationItem[] = [
     institution: "LUMS School of Science and Engineering",
     logo: lumsLogo,
     location: "Lahore, Pakistan",
-    period: "2020 - 2024",
+    period: "Aug. 2020 - May 2024",
     details: [
-    //   "Comprehensive curriculum covering algorithms, data structures, software engineering, and machine learning",
-    //   "Specialized coursework in artificial intelligence, computer vision, and bioinformatics",
-    //   "Hands-on experience with modern programming languages and frameworks",
-    //   "Research experience in machine learning applications for biomedical data analysis"
+      "Relevant coursework: Computer Vision, Machine Learning, Language Processing with Generative AI, Deep Learning, Introduction to AI, Software Engineering, and Data Structures & Algorithms.",
     ]
   }
 ];

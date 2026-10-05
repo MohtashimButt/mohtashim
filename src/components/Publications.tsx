@@ -17,7 +17,7 @@ const publications: Publication[] = [
     conference: "IEEE International Geoscience and Remote Sensing Symposium, Brisbane, Australia",
     logo: igrssLogo,
     year: "2025",
-    doi: "https://drive.google.com/file/d/1PH3w9LA_aVHwLkxBeJiJKXSDpn7Rn0sU/view?usp=sharing"
+    doi: "https://ieeexplore.ieee.org/abstract/document/11243984"
   }
 ];
 

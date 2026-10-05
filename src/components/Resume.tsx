@@ -1,8 +1,7 @@
 import { Download, FileText } from 'lucide-react';
-import resumePdf from '@/assets/Mohtashim_BUTT_Resume_.pdf'; // Vite/CRA: import works. Next.js: put file in /public and use '/Mohtashim_BUTT_Resume_.pdf'
+import resumePdf from '@/assets/MOHTASHIM_RESUME_GOOGLE.pdf';
 
 const Resume = () => {
-  // If using Next.js, change to: const resumeUrl = '/Mohtashim_BUTT_Resume_.pdf'
   const resumeUrl = resumePdf;
 
   const lastUpdated = new Date().toLocaleDateString('en-US', {

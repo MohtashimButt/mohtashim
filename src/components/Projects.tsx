@@ -1,13 +1,11 @@
 import { Github, ExternalLink } from 'lucide-react';
 import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
 import project4 from '@/assets/project-4.jpg';
-import project5 from '@/assets/project-5.jpg';
 
 interface Project {
   title: string;
-  image: string;
+  image?: string;
   description: string[];
   github: string;
   demo?: string;
@@ -16,61 +14,41 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Geographically Generalisable DL Model for Greenspace Segmentation in Urban Areas",
+    title: "Urban Green-Space Segmentation",
     image: project1,
     description: [
-      "Investigated the Land Use Land Cover remote sensing dataset from ESA, Sentinel, and Landsat satellites.",
-      "Researched about different vegetation indices (NDVI, NDWI) using QGIS software that may shape urban mobility.",
-      "Developed a DL model for urban greenspace segmentation and did spatio-temporal analysis of greenspaces for low-income countries (published at IGARSS).",
+      "Developed a deep-learning model for urban green-space segmentation using satellite imagery and conducted spatio-temporal analysis across developing countries.",
+      "Research published at IEEE IGARSS 2025.",
     ],
     github: "https://github.com/MohtashimButt/urban-greenspace-segmentation"
   },
   {
-    title: "Digital Heritage Conservation using Semi-Supervised Learning",
+    title: "Automatic Annotation Tool via Semi-Supervised Learning",
     image: project2,
     description: [
-      "Curated a dataset of around 1000+ petroglyphs from Chillas region of Northern Pakistan.",
-      "Created a Deep Learning model to segment petroglyphs using semi-supervised learning.",
-      "Automated the annotation + segmentation pipeline by incorporating DL model within LabelMe tool.",
+      "Trained and fine-tuned a DeepLabv3-ResNet model on manual petroglyph annotations to generate masks and label JSONs for unseen images from a single bounding box.",
     ],
     github: "https://github.com/MohtashimButt/Semi-supervised-annotation-tool",
   },
   {
-    title: "Conversational Story Generator",
-    image: project3,
+    title: "Cloud-Native Ride-Hailing Microservices",
     description: [
-      "Fine-tuned BERT/GPT-3.5 on STORIUM dataset as a storyline guidance model following MCQA approach.",
-      "Leveraged GPT-3.5 API for paragraph generation and DALL-E stable diffusion model for image generation.",
-      "Deployed the project's frontend (JS) on Vercel and backend (python) on Pythonanywhere.",
+      "Designed and deployed five containerized backend services on AWS ECS Fargate behind an internal ALB, with ECR and path-based API routing.",
+      "Served the frontend with S3 and CloudFront.",
     ],
-    github: "https://github.com/yourusername/cloud-automation",
-    demo: "https://gen-ai-woad.vercel.app/",
-    poster: "https://www.canva.com/design/DAGEc-SOpm0/9g8xip8uJ2YFQd_gyd9uKA/view"
+    github: "https://github.com/MohtashimButt/ride-hailing-user-service",
   },
   {
-    title: "Learning Management System with RBAC",
-    image: project5,
-    description: [
-      "Implemented frontend (in React JS) and backend (in Express) of a role-based access LMS.",
-      "Created db schema, set up MongoDB cluster, and applied CRUD operations via self-engineered API calls.",
-    ],
-    github: "https://github.com/MohtashimButt/LMS"
-  },
-  {
-    title: "Real-Time Lane Segmentation and Street's Top-View Generation via dashcam",
+    title: "Lane Segmentation for Autonomous Driving",
     image: project4,
     description: [
-      "Designed an algorithm that takes video from a dashcam to automatically segment the road lane (using LaneNet) architecture) and detect vehicles (using the Yolov7 model) to assist in self-driving.",
-      "Developed a dynamic homography mechanism to display a real-time orthographic top-view of the Lane.",
+      "Combined LaneNet segmentation, YOLOv7 vehicle detection, and dynamic homography to render a real-time orthographic lane view.",
     ],
     github: "https://github.com/MohtashimButt/LaneDetectionProject"
   }
 ];
 
 const Projects = () => {
-  // URL to link STORIUM to; change if you prefer a different destination
-  const storiumUrl = 'https://storium.com/';
-
   return (
     <section id="projects" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,14 +63,16 @@ const Projects = () => {
               className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elegant transition-smooth border border-border group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              </div>
+              {project.image && (
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                </div>
+              )}
 
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-4 text-foreground">
@@ -100,32 +80,12 @@ const Projects = () => {
                 </h3>
 
                 <ul className="space-y-2 mb-6">
-                  {project.description.map((item, idx) => {
-                    // split around the word STORIUM (case-sensitive)
-                    const parts = item.split(/(STORIUM)/g);
-                    return (
+                  {project.description.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-muted-foreground">
                         <span className="text-primary mt-1">•</span>
-                        <span className="text-sm leading-relaxed">
-                          {parts.map((part, i) =>
-                            part === 'STORIUM' ? (
-                              <a
-                                key={i}
-                                href={storiumUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-primary hover:underline font-medium"
-                              >
-                                {part}
-                              </a>
-                            ) : (
-                              <span key={i}>{part}</span>
-                            )
-                          )}
-                        </span>
+                        <span className="text-sm leading-relaxed">{item}</span>
                       </li>
-                    );
-                  })}
+                  ))}
                 </ul>
 
                 <div className="flex gap-4">

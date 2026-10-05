@@ -27,20 +27,11 @@ const Home = () => {
               {/* . With great power comes great responsibility! 🕸️ */}
             </p>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Currently, I'm working at{' '}
-              <a
-                href="https://www.dfki.de/en/web"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium transition-smooth"
-              >
-                German Research Center for Artificial Intelligence
-              </a>
-              , as a Guest Researcher, I fine-tune LLMs on Protein, DNA, and RNA
-              sequences for classification, regression, and interaction tasks. I
-              also deploy Python Applications (Django or Flask) on Gunicorn
-              (reverse proxied with Nginx). Previously, I worked as a Software
-              Engineer (Backend) at {' '}
+              Currently, I'm an AI & Automation Engineer at{' '}
+              <span className="text-primary font-medium">Acorn IT Services</span>,
+              where I build data platforms, AI-assisted workflows, and backend
+              automations for client operations. Previously, I was a Software
+              Engineer 1 at{' '}
               <a
                 href="https://www.careem.com/en-AE/"
                 target="_blank"
@@ -49,8 +40,7 @@ const Home = () => {
               >
                 Careem
               </a>{' '}
-              (an everything app in the MENA region), where I developed, scaled,
-              and maintained Go microservices.
+              (Uber Inc.).
             </p>
             <div className="flex gap-4 pt-4">
               <button
