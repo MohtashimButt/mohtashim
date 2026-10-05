@@ -33,22 +33,22 @@ const experiences: ExperienceItem[] = [
   },
   {
     role: "Guest Researcher",
-    company: "German Research Center for Artificial Intelligence",
+    company: "German Research Center for Artificial Intelligence (DFKI)",
     logo: dfkiLogo,
-    location: "Kaiserslautern, Germany (Remote)",
-    period: "May 2025 - Present",
+    location: "Kaiserslautern, Rhineland-Palatinate, Germany (Remote)",
+    period: "May 2025 - Sep. 2025",
     responsibilities: [
       {
-        text: "Built a Python app (and deployed using Gunicorn/Nginx) for an explainable GAT-based network graph using D3JS to predict gut-microbe to disease links across 120 diseases for potential drug-discovery.",
+        text: "Built a Python app (deployed with Gunicorn/Nginx) for an explainable GAT-based network graph using D3.js to predict gut-microbe to disease links across 120 diseases for potential drug discovery.",
         link: "https://sds-genetic-interaction-analysis.opendfki.de/gut_brain/",
       },
       "Fine-tuned 100+ LLMs from Hugging Face for protein/DNA/RNA sequence classification, regression, and interaction.",
       {
-        text: "Deployed 32 embedding methods, 24 ML classifiers with 3 data types via containerized Python app (FLASK).",
+        text: "Deployed 32 embedding methods and 24 ML classifiers across 3 data types via a containerized Flask app.",
         link: "https://sds-genetic-interaction-analysis.opendfki.de/bio-experiment/",
       },
       {
-        text: "Built an LLM-based research assistant leveraging AI agents (researcher, evaluator, experiment proposer) to suggest a novel hypothesis and research path.",
+        text: "Built an LLM-based research assistant using AI agents (researcher, evaluator, experiment proposer) to suggest novel hypotheses and research paths.",
         link: "https://sds-genetic-interaction-analysis.opendfki.de/biomedical_discovery/",
       },
     ],
@@ -125,7 +125,7 @@ const experiences: ExperienceItem[] = [
 
 const getLinkText = (company: string) => {
   if (company === "Centre for Water Informatics and Technology") return "Project report";
-  if (company === "German Research Center for Artificial Intelligence") return "Tool link";
+  if (company === "German Research Center for Artificial Intelligence (DFKI)") return "Tool link";
   return "Related link";
 };
 

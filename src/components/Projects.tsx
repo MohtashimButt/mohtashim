@@ -1,6 +1,7 @@
 import { Github, ExternalLink } from 'lucide-react';
 import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
+import project3 from '@/assets/project-3.jpg';
 import project4 from '@/assets/project-4.jpg';
 
 interface Project {
@@ -29,6 +30,18 @@ const projects: Project[] = [
       "Trained and fine-tuned a DeepLabv3-ResNet model on manual petroglyph annotations to generate masks and label JSONs for unseen images from a single bounding box.",
     ],
     github: "https://github.com/MohtashimButt/Semi-supervised-annotation-tool",
+  },
+  {
+    title: "Conversational Story Generator",
+    image: project3,
+    description: [
+      "Fine-tuned BERT/GPT-3.5 on the STORIUM dataset as a storyline guidance model following an MCQA approach.",
+      "Leveraged the GPT-3.5 API for paragraph generation and DALL-E stable diffusion for image generation.",
+      "Deployed the frontend (JS) on Vercel and backend (Python) on Pythonanywhere.",
+    ],
+    github: "https://github.com/MohtashimButt/conversational-story-generator",
+    demo: "https://gen-ai-woad.vercel.app/",
+    poster: "https://www.canva.com/design/DAGEc-SOpm0/9g8xip8uJ2YFQd_gyd9uKA/view",
   },
   {
     title: "Cloud-Native Ride-Hailing Microservices",
